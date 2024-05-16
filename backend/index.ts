@@ -16,10 +16,10 @@ dotenv.config();
 
 const app: Express = express();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 
 const corsOptions = {
-    origin: process.env.CORS_URL
+    origin: process.env.CORS_URL || "http://127.0.0.1:5173"
 }
 
 // Cron jobs
@@ -44,7 +44,7 @@ app.use(applicationRouter);
 const server = http.createServer(app);
 
 // Socket.io connection
-export const io = new Server(server, { cors: { origin: process.env.CORS_URL } })
+export const io = new Server(server, { cors: { origin: process.env.CORS_URL || "http://127.0.0.1:5173" } })
 io.on("connection", (socket) => {
     socket.emit("con", { message: "a new client connected" })
     console.log("Socket.io running")

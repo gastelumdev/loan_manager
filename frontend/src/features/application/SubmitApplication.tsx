@@ -34,7 +34,7 @@ const SubmitApplication = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>Apply</Button>
+      <Button onClick={onOpen} colorScheme='green'>Apply</Button>
 
       <Modal
         initialFocusRef={initialRef}
@@ -58,10 +58,10 @@ const SubmitApplication = () => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme='blue' mr={3} onClick={handleSubmit} isDisabled={formData.fullname === "" || formData.amount === 0}>
+            <Button mr={3} onClick={handleOnClose}>Cancel</Button>
+            <Button colorScheme='green' onClick={handleSubmit} isDisabled={formData.fullname === "" || formData.amount === 0}>
               Apply
             </Button>
-            <Button onClick={handleOnClose}>Cancel</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
