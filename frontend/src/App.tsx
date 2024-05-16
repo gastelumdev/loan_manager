@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Error_404 />} />
         <Route path="user/:id" element={<Application />} />
         <Route path="admin" element={<Admin />} />
         <Route path="*" element={<Error_404 />} />
