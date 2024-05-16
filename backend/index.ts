@@ -10,7 +10,8 @@ import cron from "node-cron";
 import fs from "fs";
 import helmet from "helmet";
 
-import applicationRouter from "./routes/application.route"
+import applicationRouter from "./routes/application.route";
+import userRouter from "./routes/user.route";
 
 dotenv.config();
 
@@ -40,6 +41,7 @@ app.use(helmet());
 
 // Routes
 app.use(applicationRouter);
+app.use(userRouter);
 
 const server = http.createServer(app);
 

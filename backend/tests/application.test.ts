@@ -30,7 +30,6 @@ describe("GET /applications", () => {
 
     it("should return applications", async () => {
         const response = await request(baseURL).get("/applications");
-        console.log(response.body)
         expect(response?.body.length >= 1).toBe(true);
     })
 });
@@ -60,7 +59,6 @@ describe("GET /applications/user/:id", () => {
 
     it("should return applications", async () => {
         const response = await request(baseURL).get(`/applications/user/${newApplication.organization}`);
-        console.log(response.body)
         expect(response?.body.length >= 1).toBe(true);
     })
 })
