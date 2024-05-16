@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { TApplication } from "../../types/application";
 
 export const api: any = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_URL }),
+    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_URL || "http://localhost:8000" }),
     tagTypes: ["Application"],
     endpoints: (builder) => ({
         getApplications: builder.query<TApplication[], null>({

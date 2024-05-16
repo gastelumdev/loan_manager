@@ -13,7 +13,7 @@ const Admin = () => {
     }
 
     useEffect(() => {
-        const socket = io(import.meta.env.VITE_API_URL);
+        const socket = io(import.meta.env.VITE_API_URL || "http://localhost:8000");
         socket.connect();
 
         socket.on("update applications", () => {
