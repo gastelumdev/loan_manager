@@ -1,15 +1,23 @@
-import { Badge, Box, Card, CardBody, Center, Flex, Heading, Spacer, Stack, Text } from '@chakra-ui/react'
+import { Badge, Box, Button, Card, CardBody, Center, Flex, Heading, Spacer, Stack, Text } from '@chakra-ui/react'
 import SubmitApplication from './SubmitApplication'
-import { useDeleteApplicationMutation, useGetUserApplicationsQuery } from '../../app/services/api';
-import { useParams } from 'react-router-dom';
+import { useDeleteApplicationMutation, useGetUserApplicationsQuery, useGetUserQuery } from '../../app/services/api';
+import { useNavigate, useParams } from 'react-router-dom';
 import { CloseIcon } from '@chakra-ui/icons';
 import { io } from 'socket.io-client';
 import { useEffect } from 'react';
 
 const Application = () => {
     const {id} = useParams()
+    const navigate = useNavigate()
+    const {data: user, error} = useGetUserQuery(id);
     const {data: applications, refetch} = useGetUserApplicationsQuery(id);
     const [deleteApplcation] = useDeleteApplicationMutation();
+
+    useEffect(() => {
+        if (error) {
+            navigate("/")
+        }
+    }, [error])
 
     useEffect(() => {
         const socket = io(import.meta.env.VITE_API_URL || "http://localhost:8000");
@@ -23,10 +31,14 @@ const Application = () => {
     return (
         <Box p={"50px"} px={{md: "200px"}}>
             <Flex>
-                <Heading mb={"20px"} size={"lg"}>User Dashboard</Heading>
+                <Box>
+                    <Heading mb={"5px"} size={"lg"}>User Dashboard</Heading>
+                    <Text>{user.fullname}</Text>
+                </Box>
                 <Spacer />
                 <Box mb={"40px"}>
                     <SubmitApplication />
+                    <Button as={"a"} ml={"10px"} href='/' colorScheme='green'>Home</Button>
                 </Box>
             </Flex>
             <Box >

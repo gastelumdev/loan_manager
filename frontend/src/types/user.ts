@@ -1,4 +1,5 @@
 export type TUser = {
     id: number;
-    type: "user" | "admin";
+    fullname: string;
+    type?: "user" | "admin";
 }

@@ -1,4 +1,4 @@
-import {Box, Card, CardBody, Center, Flex, Heading, Select, Spacer, Stack, Text} from "@chakra-ui/react"
+import {Box, Button, Card, CardBody, Center, Flex, Heading, Select, Spacer, Stack, Text} from "@chakra-ui/react"
 import { TApplication } from '../../types/application';
 import { useGetApplicationsQuery, useUpdateApplicationMutation } from "../../app/services/api";
 import { io } from 'socket.io-client';
@@ -25,6 +25,10 @@ const Admin = () => {
         <Box p={"50px"}  px={{md: "200px"}}>
             <Flex>
                 <Heading mb={"20px"} size={"lg"}>Admin Dashboard</Heading>
+                <Spacer />
+                <Box mb={"40px"}>
+                    <Button as={"a"} ml={"10px"} href='/' colorScheme='green'>Home</Button>
+                </Box>
             </Flex>
             <Box>
                 {applications?.length > 0 ? applications?.map((application: any) => {

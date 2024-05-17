@@ -9,7 +9,13 @@ export const getAll = async (req: Request, res: Response) => {
 
 export const getOne = async (req: Request, res: Response) => {
     const user = await User.findByPk(req.params.id);
-    res.send(user)
+
+    if (user) {
+        res.send(user)
+    } else {
+        res.status(404).send({ message: "User not found" });
+    }
+
 }
 
 export const create = async (req: Request, res: Response) => {
