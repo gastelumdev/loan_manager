@@ -3,6 +3,11 @@ This is a simple Typescript application that helps users submit loan application
 
 To demo a live version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com)
 
+## Table of Contents
+- [Automated Testing](https://github.com/gastelumdev/loan_manager/edit/main/README.md#automated-tests)
+
+## Tech Stack
+
 ### Backend
 The backend serves as an API that provides several user and application endpoints that are called by the frontend. 
 The application was built using Node.js, Express, and SQLite.
@@ -16,10 +21,14 @@ times.
 Socket.io allows for automatic updates. For example, when a loan is approved, the barrower can see the status change to "Approved" without
 any user input or page reloading. To test functionality, put two browser windows side by side, and then navigate to the admin page on one browser window, and 
 to a user page on the other. Then, submit a new loan and see it automatically dispaly in the admin page. Now, update the status on the admin
-page and watch the status change in the user page.
+page and watch the status change in the user page. See [demo](https://github.com/gastelumdev/loan_manager/edit/main/README.md#uis-updated-in-real-time)
 
 #### Automated Tests
-Automated tests for the API endpoints were implemented with Jest. To run the test suite, run ```
+Automated tests for the API endpoints were implemented with Jest. To run the test suite, type ```cd backend``` to change into the backend directory and ```npm run test```
+to run the Jest test suite.
+
+![image](https://github.com/gastelumdev/loan_manager/assets/96878603/271ae469-8cf9-4cda-88fd-50687ad40cfa)
+
 
 ### Frontend
 The frontend is a Vite React application that calls the API via Redux RTK Query. The UI consists of mostly Chakra UI components.
