@@ -35,6 +35,10 @@ describe("GET /applications", () => {
 });
 
 describe("GET /applications/user/:id", () => {
+    const newUser = {
+        id: 1000,
+        fullname: "Test User"
+    }
     const newApplication = {
         id: 1000000000,
         organization: 1000,
@@ -44,10 +48,12 @@ describe("GET /applications/user/:id", () => {
     };
 
     beforeAll(async () => {
+        await request(baseURL).post("/users").send(newUser);
         await request(baseURL).post("/applications").send(newApplication);
     });
 
     afterAll(async () => {
+        await request(baseURL).delete(`/users/${newUser.id}`)
         await request(baseURL).delete(`/applications/${newApplication.id}`)
     })
 
@@ -60,6 +66,12 @@ describe("GET /applications/user/:id", () => {
     it("should return applications", async () => {
         const response = await request(baseURL).get(`/applications/user/${newApplication.organization}`);
         expect(response?.body.length >= 1).toBe(true);
+    })
+
+    it("should return a 404 if the user does not exist", async () => {
+        const response = await request(baseURL).get(`/applications/user/${999999}`);
+        expect(response?.statusCode).toBe(404);
+        expect(response?.body.message).toBe("User not found");
     })
 })
 

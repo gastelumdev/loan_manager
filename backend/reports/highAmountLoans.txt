@@ -6,3 +6,6 @@ Thu, 16 May 2024 14:00:00 GMT {"id":17,"organization":5,"status":"Waiting","amou
 Thu, 16 May 2024 14:00:00 GMT {"id":999999,"organization":2,"status":"Waiting","amount":1000000,"fullname":"Loan Application 2","createdAt":"2024-05-16T12:50:21.143Z","updatedAt":"2024-05-16T12:50:21.143Z"}
 Thu, 16 May 2024 22:00:00 GMT {"id":10,"organization":2,"status":"Approved","amount":200000,"fullname":"Loan Application 2","createdAt":"2024-05-16T02:09:15.245Z","updatedAt":"2024-05-16T02:09:51.416Z"}
 Thu, 16 May 2024 22:00:00 GMT {"id":17,"organization":5,"status":"Waiting","amount":200000,"fullname":"Org 1","createdAt":"2024-05-16T01:56:42.663Z","updatedAt":"2024-05-16T01:56:42.663Z"}
+Fri, 17 May 2024 14:00:00 GMT {"id":1000000008,"organization":1,"status":"Waiting","amount":100000,"fullname":"Org 1","createdAt":"2024-05-16T22:57:49.198Z","updatedAt":"2024-05-16T22:57:49.198Z"}
+Fri, 17 May 2024 14:00:00 GMT {"id":1000000009,"organization":1,"status":"Waiting","amount":3000000,"fullname":"Org 2","createdAt":"2024-05-16T23:00:22.800Z","updatedAt":"2024-05-16T23:00:22.800Z"}
+Fri, 17 May 2024 14:00:00 GMT {"id":1000000010,"organization":2,"status":"Waiting","amount":3000000,"fullname":"Loan 11","createdAt":"2024-05-16T23:06:33.393Z","updatedAt":"2024-05-16T23:06:33.393Z"}

@@ -33,7 +33,7 @@ const Application = () => {
             <Flex>
                 <Box>
                     <Heading mb={"5px"} size={"lg"}>User Dashboard</Heading>
-                    <Text>{user.fullname}</Text>
+                    <Text>{user?.fullname}</Text>
                 </Box>
                 <Spacer />
                 <Box mb={"40px"}>

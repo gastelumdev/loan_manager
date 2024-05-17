@@ -24,7 +24,7 @@ const corsOptions = {
 }
 
 // Cron jobs
-cron.schedule("0 0 7,15 * * 1,2,3,4,5", async () => {
+cron.schedule("0 0 0,8 * * 1,2,3,4,5", async () => {
     const applications: any = await Application.findAll({ where: { amount: { [Op.gte]: 100000 } } });
 
     for (const application of applications) {

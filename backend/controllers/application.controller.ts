@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { Application } from "../models/application.model";
 import { io } from "../index";
+import { User } from "../models/user.model";
 
 export const getAll = async (req: Request, res: Response) => {
     const applications = await Application.findAll();
@@ -8,8 +9,15 @@ export const getAll = async (req: Request, res: Response) => {
 }
 
 export const getAllForUser = async (req: Request, res: Response) => {
-    const application = await Application.findAll({ where: { organization: req.params.id } });
-    res.send(application)
+    const user = await User.findByPk(req.params.id);
+
+    if (user) {
+        const application = await Application.findAll({ where: { organization: req.params.id } });
+        res.send(application)
+    } else {
+        res.status(404).send({ message: "User not found" });
+    }
+
 }
 
 export const create = async (req: Request, res: Response) => {
