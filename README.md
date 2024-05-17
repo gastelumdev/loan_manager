@@ -33,7 +33,7 @@ times.
 Socket.io allows for automatic updates. For example, when a loan is approved, the barrower can see the status change to "Approved" without
 any user input or page reloading. To test functionality, put two browser windows side by side, and then navigate to the admin page on one browser window, and 
 to a user page on the other. Then, submit a new loan and see it automatically dispaly in the admin page. Now, update the status on the admin
-page and watch the status change in the user page. See [demo](https://github.com/gastelumdev/loan_manager/README.md#ui-updated-in-real-time)
+page and watch the status change in the user page. See [demo](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#ui-updated-in-real-time)
 
 #### Automated Tests
 Automated tests for the API endpoints were implemented with Jest. To run the test suite, type ```cd backend``` to change into the backend directory and ```npm run test```
