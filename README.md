@@ -73,6 +73,9 @@ To access a live version of the API, visit [https://loanmanagerservice.onrender.
 - ```PUT /applications/:id```
 - ```DELETE /applications/:id```
 
+### Application
+To demo a live version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com)
+
 #### Home page
 The home page allows the user to navigate to either the admin page or applications page.
 
