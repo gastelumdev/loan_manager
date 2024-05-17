@@ -4,7 +4,19 @@ This is a simple Typescript application that helps users submit loan application
 To demo a live version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com)
 
 ## Table of Contents
-- [Automated Testing](https://github.com/gastelumdev/loan_manager/README.md#automated-tests)
+- [Tech Stack](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#tech-stack)
+  - [Backend](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#backend)
+    - [Cron Job Reports](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#cron-job-reports)
+    - [Socket.io for automatic updates](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#socketio-for-automatic-updates)
+    - [Automated Testing](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#automated-tests)
+  - [Frontend](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#frontend)
+- [Installation](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#installation)
+- [Usage](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#usage)
+  - [Home Page](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#home-page)
+  - [User Drawer](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#user-drawer)
+  - [User Dashboard](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#user-dashboard)
+  - [Admin Dashboard](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#admin-dashboard)
+- [UI updated in real time](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#uis-updated-in-real-time)
 
 ## Tech Stack
 
@@ -91,7 +103,7 @@ as per the use case requirements.
 
 ![image](https://github.com/gastelumdev/loan_manager/assets/96878603/617772e1-4f0d-4e89-8084-c99293c3c7aa)
 
-### UIs updated in real time
+### UI updated in real time
 
 Any time the applications are created, updated or deleted, a message is sent with a socket.io server. The message triggers the applications to be 
 refetched and rerendered. An improvement could be to implement toast notifications to alert the user of an update to the UI.
