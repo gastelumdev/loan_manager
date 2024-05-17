@@ -1,9 +1,8 @@
 import { Box, Button, Card, CardBody, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, FormLabel, Input, Spacer, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import { useState } from 'react';
-import { useCreateUserMutation, useDeleteUserMutation, useGetUsersQuery } from '../../app/services/api';
+import { useCreateUserMutation, useGetUsersQuery } from '../../app/services/api';
 import { TUser } from '../../types/user';
 import { useNavigate } from 'react-router-dom';
-import { CloseIcon } from '@chakra-ui/icons';
 
 const User = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
