@@ -32,7 +32,7 @@ times.
 #### Socket.io for automatic updates
 Socket.io allows for automatic updates. For example, when a loan is approved, the barrower can see the status change to "Approved" without
 any user input or page reloading. To test functionality, put two browser windows side by side, and then navigate to the admin page on one browser window, and 
-to a user page on the other. Then, submit a new loan and see it automatically dispaly in the admin page. Now, update the status on the admin
+to a user page on the other. Then, submit a new loan and see it automatically display in the admin page. Now, update the status on the admin
 page and watch the status change in the user page. See [demo](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#ui-updated-in-real-time).
 
 #### Automated Tests
@@ -61,7 +61,7 @@ The home page allows the user to navigate to either the admin page or applicatio
 
 #### User Drawer
 Clicking the "Apply" button in the home page opens a side drawer. Within the drawer the user can either enter your
-full name if they are a new user, or select their name from a list of users.
+full name if they are a new user or select their name from a list of users.
 
 ![image](https://github.com/gastelumdev/loan_manager/assets/96878603/1cd518df-9981-4468-bb5a-dc06930d28b3)
 
@@ -93,8 +93,8 @@ item's details including the status and provides a delete option.
 ![image](https://github.com/gastelumdev/loan_manager/assets/96878603/25a8370d-b080-4e91-b123-67ee80de723d)
 
 #### Admin Dashboard
-The admin dashboard shows every submitted loan application in the form of a card. The application cards display the 
-item's details and also provide a way for the admin user to update the status in the form of a dropdown.
+The admin dashboard shows every submitted loan application as a card. The application cards display the 
+item's details and provide a way for the admin user to update the status as a dropdown.
 
 ![image](https://github.com/gastelumdev/loan_manager/assets/96878603/cb266d06-5d99-417b-b91e-b85fdd389ceb)
 
