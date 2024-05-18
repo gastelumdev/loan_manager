@@ -44,4 +44,4 @@ yarn.lock
 uploads
 
 # db file
-#database.sqlite
+database.sqlite
