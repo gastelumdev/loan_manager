@@ -51,6 +51,7 @@ The frontend is a Vite React application that calls the API via Redux RTK Query.
 ## Installation
 
 To get the application running locally on your machine, clone this repo and run 
+- ```cd loan_manager``` to change into the root directory
 - ```npm run start-backend``` to run the API backend server
 - ```npm run start-frontend``` to run the React frontend server
 - Visit [http://localhost:5173](http://127.0.0.1:5173) to access the home page.
