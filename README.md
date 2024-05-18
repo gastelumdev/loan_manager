@@ -54,6 +54,28 @@ To get the application running locally on your machine, clone this repo and run
 
 ## Usage
 
+### API endpoints
+To access a live version of the API, visit [https://loanmanagerservice.onrender.com](https://loanmanagerservice.onrender.com).
+
+#### User
+
+- ```GET /users```
+- ```GET /users/:id```
+- ```POST /users```
+- ```PUT /users/:id```
+- ```DELETE /users/:id```
+
+#### Loan Applications
+
+- ```GET /applications```
+- ```GET /applications/user/:id``` Returns all the applications for a specific user
+- ```POST /applications```
+- ```PUT /applications/:id```
+- ```DELETE /applications/:id```
+
+### Application
+To demo a live version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com)
+
 #### Home page
 The home page allows the user to navigate to either the admin page or applications page.
 
