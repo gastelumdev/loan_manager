@@ -1,7 +1,10 @@
 # Loan Manager
 This is a simple Typescript application that helps users submit loan applications and allows admins to approve or deny them.
 
-To demo a live version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com)
+To demo a deployed version of the application, visit [https://loanmanager.onrender.com](https://loanmanager.onrender.com).
+
+## Loom Video Demo
+[![image](https://github.com/gastelumdev/loan_manager/assets/96878603/54a2da06-358d-4d3f-a629-9f548b5f504c)](https://www.loom.com/share/fadbca8981494f03869eec96b2c4de15?sid=d6bfb103-0dbf-4bcf-b8d6-c593e5c9e045)
 
 ## Table of Contents
 - [Tech Stack](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#tech-stack)
@@ -33,7 +36,7 @@ times.
 Socket.io allows for automatic updates. For example, when a loan is approved, the barrower can see the status change to "Approved" without
 any user input or page reloading. To test functionality, put two browser windows side by side, and then navigate to the admin page on one browser window, and 
 to a user page on the other. Then, submit a new loan and see it automatically display in the admin page. Now, update the status on the admin
-page and watch the status change in the user page. See [demo](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#ui-updated-in-real-time).
+page and watch the status change in the user page. [Check out the demo GIF](https://github.com/gastelumdev/loan_manager?tab=readme-ov-file#ui-updated-in-real-time).
 
 #### Automated Tests
 Automated tests for the API endpoints were implemented with Jest. To run the test suite, type ```cd backend``` to change into the backend directory and ```npm run test```
